@@ -52,7 +52,7 @@ int[,] FindProdOfTwoMatrices(int[,] firstMatrix, int[,] secondMatrix)
     
     if (firstMatrix.GetLength(1) != secondMatrix.GetLength(0))
     {
-        Console.WriteLine("Матрицы несовместимы."); 
+        Console.WriteLine("Матрицы несовместимы!"); 
     }
     
 
@@ -74,16 +74,16 @@ int[,] FindProdOfTwoMatrices(int[,] firstMatrix, int[,] secondMatrix)
     return productMtrx;
 }
 
-int rowsFirst = GetMatrSize("Введите кол-во строк 1 таблицы:");
-int colsFirst = GetMatrSize("Введите кол-во столбцов 1 таблицы:");
-int rowsSecond = GetMatrSize("Введите кол-во строк 2 таблицы:");
-int colsSecond = GetMatrSize("Введите кол-во столбцов 2 таблицы:");
+int rowsFirst = GetMatrSize("Введите количество строк 1 таблицы:");
+int colsFirst = GetMatrSize("Введите количество столбцов 1 таблицы:");
+int rowsSecond = GetMatrSize("Введите количество строк 2 таблицы:");
+int colsSecond = GetMatrSize("Введите количество столбцов 2 таблицы:");
 Console.WriteLine();
 (int[,] firstMtrx, int[,] secondMtrx) = InitTwoMatrices(rowsFirst, colsFirst, rowsSecond, colsSecond);
-Console.WriteLine ("Табл. 1:");
+Console.WriteLine ("Таблица 1:");
 Console.WriteLine();
 PrintMatrix(firstMtrx);
-Console.WriteLine ("Табл. 2:");
+Console.WriteLine ("Таблица 2:");
 Console.WriteLine();
 PrintMatrix(secondMtrx);
 int[,] resultMatrix = FindProdOfTwoMatrices(firstMtrx, secondMtrx);
